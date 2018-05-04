@@ -1,0 +1,7 @@
+To run program execute the next command
+
+> python draw_tool.py
+
+to run unittest
+
+> python test_draw.py
