@@ -1,0 +1,41 @@
+---
+resources:
+- name: resource-draw
+  type: git
+  source:
+    uri: git@github.com:jeliecerv/draw-console.git
+    branch: develop
+    private_key: |-
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEogIBAAKCAQEApJW6gKp6mI50gySGiig22mw2B1MlWMq1zPzGPCA/1pio3QnT
+      6snGFfnj339eZbcyx9tZfMVOajUpclf36Zq1nQMVYefiO9M1fr0RrS3iJHqoJI17
+      DuvHrt3sEeOSeUAGNTsECTilef+4mdPhmyL8aD4tqvJc8Zwj6F8F2jRlIbRwuCfo
+      Js6lsAV4eiTotrJE2d2Y0/hkbIUs+6sxSVGIoVGuz7QR/0MXH/2F/V4CXf9eBCss
+      Wq/oese1bb8lIz3ckmIDxvyguZkDnxxX1s4b4bXPJoYrAyOUB6ez2Lf7aYc199aK
+      Jb0tYNkwVLtv1tFdig1c5oVBRuO1sGZZejpMkQIDAQABAoIBAChVnWA851CN0NX2
+      1JX1JwQ+crs20DdDbmxvIjHIAX0Y6oFJEEtA6a+nDwZN05d/3w0Fn5epTv9OSfsA
+      vfvc81coU0wsJNBegYSu1y8myH4CJUTX+2l7tPMQ5fK4X8QhQaQ381RDMqKEXfws
+      5eQ8Hbl6S3zSap63kkE3UFrablJk3nnBfq1qdkPb1fsNhzSjAP4TEwKJFwXeZ70G
+      flKC1tuBDYd9yp5t1xghDC25hUd3mbByqTWjXA6rm1RmaHTHyycgntIFyfGNYnoz
+      2PJ+bNe6bL+XXvq08q3+xExC/hLAxGUXFWkTlTIsQJso7X7tcbjeSt+SQNfUB+e2
+      lHpIZZUCgYEA0tbCvHkQBt81vNaOD82Fo9FkAe+JKOPiU6sbU4+nNZ/oDncC9bkz
+      duVIfVQVSw6FJm7bqUVe3GsvBT7uxRfNW8bFK4QmxkYpzis+JrtD5UUhi7vsTpRI
+      FbqnvhY/5fgOxw7gVtbfh/zzQ95cyj+Do29z+wnEgLIgc8OX7wJTi08CgYEAx9an
+      Eos/+Oo/tWiXDOboWe1MKUjRdQb2sgysT+Xcu/Gmbxn7VnLHegHt6oIDuyLVYxSk
+      vpyNSUyJmADA9te+mz1j+XPGaKOtXw+CZTkyZhODcJqXlq6FFKP5Hg22q/o3NSHv
+      1SsdPT9HUN96/gYxnaGm6zZ9IaZUa5w1twrpMh8CgYAWQ/nSv5Iyt5XMOHhOMO0h
+      DLbcAXjhqZc4MMS1AWGuJxHxnR3h50oJD1OlcKDDCWiEU4a9DIdlDaisjCXZCJd2
+      Trp5yv3xSG2XyTdKDdKwvqk5QYJGFiC6sriOOXlMBvNAkFCeuxhmGw9xpmT0Mtrr
+      ApUj+LcYxDbrIsfDxOIfvwKBgDvgyHzY9pkp71728NOv2I0hekGgjQpIxOCCxZrH
+      IEW8WYdOvK2hhL29GEG9JUsMW+3tQJPQqtD8uvmtuCP+byFq2qrjEt9Fs+wY5JRZ
+      +Az36dlyqNtAfaW6oCluKH8NYT9tZMR1v7QbYs4LuHmm93To++/cis/rW75Gtx2a
+      ilc3AoGARXPXH8YrrRwdv2hqEuDCbQBSawOb8Eszn+YBRhjprRsiDI/1E9ahCyJ/
+      4h6EIOfXOYxpP65oQ+X1cYcTvA9Tb9TKUzxq+i0sCbGUu4XLZGggBVeEvTjK3Jkt
+      xeOFI0et2x8afj0h+1CDNU6uXIL43cXaiKKYV0/zVyOWvO5kQK4=
+      -----END RSA PRIVATE KEY-----
+
+jobs:
+- name: draw-console
+  plan:
+  - get: resource-draw
+    trigger: true
